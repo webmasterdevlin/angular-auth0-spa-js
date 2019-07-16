@@ -1,0 +1,10 @@
+<header class="header-container">
+  <button (click)="login()" *ngIf="!isAuthenticated">Log in</button>
+  <button (click)="logout()" *ngIf="isAuthenticated">Log out</button>
+
+  <div class="container">
+    <a routerLink="/">Home</a>
+    <a routerLink="/profile" *ngIf="isAuthenticated">Profile</a>
+    <a routerLink="/collection" *ngIf="isAuthenticated">Collection</a>
+  </div>
+</header>
