@@ -8,6 +8,8 @@ import { CallbackComponent } from "./callback/callback.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { AuthGuard } from "./auth.guard";
 import { CollectionComponent } from "./collection/collection.component";
+import { ExternalApiComponent } from './external-api/external-api.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { CollectionComponent } from "./collection/collection.component";
     NavbarComponent,
     CallbackComponent,
     ProfileComponent,
-    CollectionComponent
+    CollectionComponent,
+    ExternalApiComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: "callback",
@@ -32,6 +36,11 @@ import { CollectionComponent } from "./collection/collection.component";
       {
         path: "collection",
         component: CollectionComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'external-api',
+        component: ExternalApiComponent,
         canActivate: [AuthGuard]
       },
       {

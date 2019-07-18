@@ -6,5 +6,6 @@
     <a routerLink="/">Home</a>
     <a routerLink="/profile" *ngIf="isAuthenticated">Profile</a>
     <a routerLink="/collection" *ngIf="isAuthenticated">Collection</a>
+    <a [routerLink]="['external-api']" *ngIf="isAuthenticated">External API</a>
   </div>
 </header>

@@ -16,7 +16,8 @@ export class AuthService {
   config = {
     domain: "devlin.auth0.com",
     client_id: "ZiWHRPel3iA5Ma8G2E45NU02Vw015IN5",
-    redirect_uri: `${window.location.origin}/callback`
+    redirect_uri: `${window.location.origin}/callback`,
+    audience: "http://localhost:5000/api"
   };
 
   /**
