@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import createAuth0Client from "@auth0/auth0-spa-js";
-import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
-import { BehaviorSubject } from "rxjs";
+import { Injectable } from '@angular/core';
+import createAuth0Client from '@auth0/auth0-spa-js';
+import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class AuthService {
   isAuthenticated = new BehaviorSubject(false);
@@ -14,10 +14,10 @@ export class AuthService {
 
   // Auth0 application configuration
   config = {
-    domain: "devlin.auth0.com",
-    client_id: "ZiWHRPel3iA5Ma8G2E45NU02Vw015IN5",
+    domain: 'devlin.auth0.com',
+    client_id: 'ZiWHRPel3iA5Ma8G2E45NU02Vw015IN5',
     redirect_uri: `${window.location.origin}/callback`,
-    audience: "http://localhost:5000/api"
+    audience: 'http://localhost:5000/api'
   };
 
   /**

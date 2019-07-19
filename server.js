@@ -21,7 +21,7 @@ const checkJwt = jwt({
     jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`
   }),
 
-  audience: authConfig.audience,
+  audience: authConfig.audience, // For API authorization
   issuer: `https://${authConfig.domain}/`,
   algorithm: ["RS256"]
 });
@@ -34,4 +34,4 @@ app.get("/api/external", checkJwt, (req, res) => {
 });
 
 // Start the app
-app.listen(5000, () => console.log('API listening on 5000'));
+app.listen(5000, () => console.log("API listening on 5000"));

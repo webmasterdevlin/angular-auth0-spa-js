@@ -8,9 +8,8 @@ describe('ExternalApiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExternalApiComponent ]
-    })
-    .compileComponents();
+      declarations: [ExternalApiComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

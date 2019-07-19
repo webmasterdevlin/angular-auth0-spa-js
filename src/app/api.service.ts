@@ -14,7 +14,7 @@ export class ApiService {
   async ping(): Promise<any> {
     const client = await this.authService.getAuth0Client();
     const token = await client.getTokenSilently();
-     console.log(token);
+    console.log('EXTRACTED_TOKEN (^_^): ', token);
     return this.httpClient
       .get('/api/external', {
         headers: {

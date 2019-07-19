@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { AuthService } from "src/app/auth.service";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-callback",
-  templateUrl: "./callback.component.html",
-  styleUrls: ["./callback.component.css"]
+  selector: 'app-callback',
+  templateUrl: './callback.component.html',
+  styleUrls: ['./callback.component.css']
 })
 export class CallbackComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
@@ -18,7 +18,7 @@ export class CallbackComponent implements OnInit {
 
     // Get the URL the user was originally trying to reach
     const targetRoute =
-      result.appState && result.appState.target ? result.appState.target : "";
+      result.appState && result.appState.target ? result.appState.target : '';
 
     // Update observables
     this.authService.isAuthenticated.next(await client.isAuthenticated());

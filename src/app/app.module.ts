@@ -1,15 +1,15 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from "./app.component";
-import { NavbarComponent } from "./navbar/navbar.component";
-import { RouterModule } from "@angular/router";
-import { CallbackComponent } from "./callback/callback.component";
-import { ProfileComponent } from "./profile/profile.component";
-import { AuthGuard } from "./auth.guard";
-import { CollectionComponent } from "./collection/collection.component";
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { CallbackComponent } from './callback/callback.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard } from './auth.guard';
+import { CollectionComponent } from './collection/collection.component';
 import { ExternalApiComponent } from './external-api/external-api.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,16 +25,16 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path: "callback",
+        path: 'callback',
         component: CallbackComponent
       },
       {
-        path: "profile",
+        path: 'profile',
         component: ProfileComponent,
         canActivate: [AuthGuard]
       },
       {
-        path: "collection",
+        path: 'collection',
         component: CollectionComponent,
         canActivate: [AuthGuard]
       },
@@ -44,8 +44,8 @@ import {HttpClientModule} from '@angular/common/http';
         canActivate: [AuthGuard]
       },
       {
-        path: "**",
-        redirectTo: ""
+        path: '**',
+        redirectTo: ''
       }
     ])
   ],
